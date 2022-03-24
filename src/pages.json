@@ -1,0 +1,37 @@
+{
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"usingComponents": {
+			"van-popup": "wxcomponents/vant/popup/index",
+			"van-toast": "wxcomponents/vant/toast/index",
+			"van-notify": "wxcomponents/vant/notify/index",
+			"van-uploader": "wxcomponents/vant/uploader/index"
+		}
+	},
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		}
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#ffffff",
+		"navigationBarTextStyle": "black"
+	},
+	"networkTimeout": {
+		"request": 15000,
+		"downloadFile": 15000
+	},
+	"permission": {
+		"scope.userLocation": {
+			"desc": "你的位置信息将用于在地图上展示附近的补给站"
+		}
+	}
+}

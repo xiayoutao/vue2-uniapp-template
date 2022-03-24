@@ -1,0 +1,11 @@
+node_modules
+public/
+dist/
+test
+
+package.json
+tsconfig.json
+vue.config.js
+
+.idea
+.vscode

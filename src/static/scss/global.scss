@@ -1,0 +1,44 @@
+$version: "1.0.0";
+$baseBg: "http://runningbk-dev.oss-cn-guangzhou.aliyuncs.com/";
+
+@mixin flex-row($align-items: stretch, $justify-content: flex-start, $align-content: "") {
+	display: flex;
+	flex-direction: row;
+	align-content: $align-content;
+	align-items: $align-items;
+	justify-content: $justify-content;
+}
+
+// 竖行排版，一行显示一个
+@mixin flex-column($align-items: stretch, $justify-content: flex-start, $align-content: '') {
+	display: flex;
+	flex-direction: column;
+	align-content: $align-content;
+	align-items: $align-items;
+	justify-content: $justify-content;
+}
+
+// 自动换行
+@mixin  flex-wrap ($align-items: stretch, $justify-content: flex-start, $flex-direction: row) {
+	display: flex;
+	flex-direction: $flex-direction;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	align-items: $align-items;
+	justify-content: $justify-content;
+}
+
+@mixin ellipsis ($type: "nowrap", $lineClamp: 2) {
+	@if $type == "nowrap" {
+		white-space: nowrap;
+	}
+
+	@else if $type == "line-clamp" {
+		display: box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: $lineClamp;
+	}
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
