@@ -1,4 +1,5 @@
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const InstallPlugin = require('./webpack/install-webpack-plugin');
 const path = require('path');
 const resolve = dir => path.join(__dirname, dir);
 
@@ -16,7 +17,13 @@ module.exports = {
 			new StyleLintPlugin({
 				files: ['**/*.{vue,htm,html,css,sss,less,scss,sass}'],
 				fix: true
-			})
+			}),
+			new InstallPlugin({
+				generate: {
+					autoBuildNpm: 'npm',
+				},
+				package: {},
+			}),
 		]
 	},
   chainWebpack: (config) => {
