@@ -6,7 +6,7 @@ module.exports = {
 	singleQuote: true, // 字符串是否使用单引号，默认为false，使用双引号
 	trailingComma: 'all', // 是否使用尾逗号，有三个可选值"<none|es5|all>"
 	bracketSpacing: true, // 对象大括号直接是否有空格，默认为true，效果：{ foo: bar }
-	parser: 'babel', // 代码的解析引擎，默认为babylon，与babel相同。
+	// parser: 'babel', // 代码的解析引擎，默认为babylon，与babel相同。
 	// arrowParens: 'avoid', // 箭头函数只有一个参数的时候可以忽略括号
 	proseWrap: 'preserve', // 换行方式 默认值。因为使用了一些折行敏感型的渲染器（如GitHub comment）而按照markdown文本样式进行折行
 	endOfLine: 'auto', // 结尾是 \n \r \n\r auto
