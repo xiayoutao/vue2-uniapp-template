@@ -142,19 +142,19 @@ export default {
 			background-size: 100%;
 
 			&.back {
-				background-image: url("#{$baseBg}/back.png?v=#{$version}");
+				background-image: url('#{$baseBg}/back.png?v=#{$version}');
 			}
 
 			&.back-white {
-				background-image: url("#{$baseBg}/back-white.png?v=#{$version}");
+				background-image: url('#{$baseBg}/back-white.png?v=#{$version}');
 			}
 
 			&.home {
-				background-image: url("#{$baseBg}/home.png?v=#{$version}");
+				background-image: url('#{$baseBg}/home.png?v=#{$version}');
 			}
 
 			&.home-white {
-				background-image: url("#{$baseBg}/home-white.png?v=#{$version}");
+				background-image: url('#{$baseBg}/home-white.png?v=#{$version}');
 			}
 		}
 
@@ -184,6 +184,6 @@ export default {
 		@include flex-row(center);
 	}
 
-	@include flex-column("", flex-end);
+	@include flex-column('', flex-end);
 }
 </style>

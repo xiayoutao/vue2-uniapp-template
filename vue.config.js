@@ -16,7 +16,8 @@ module.exports = {
 		plugins: [
 			new StyleLintPlugin({
 				files: ['**/*.{vue,htm,html,css,sss,less,scss,sass}'],
-				fix: true
+				fix: true,
+				failOnError: false,
 			}),
 			new InstallPlugin({
 				generate: {

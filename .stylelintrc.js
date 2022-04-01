@@ -1,5 +1,10 @@
 module.exports = {
-	extends: ['stylelint-config-standard', 'stylelint-config-rational-order'],
+	extends: [
+		'stylelint-config-prettier',
+		'stylelint-config-standard',
+		'stylelint-config-rational-order',
+		'stylelint-prettier/recommended'
+	],
 	plugins: [
 		'stylelint-prettier',
 		'stylelint-scss'
@@ -23,18 +28,19 @@ module.exports = {
         "ignoreUnits": "/rpx/"
       }
     ],
+		"unit-no-unknown": null,
+		'no-empty-source': null,
+		'max-empty-lines': 1,
+		'string-quotes': 'single',
+		'no-invalid-double-slash-comments': null,
+		'selector-class-pattern': null,
+		'function-no-unknown': null,
+		'font-family-no-missing-generic-family-keyword': null,
+		'custom-property-no-missing-var-function': null,
 		'declaration-colon-space-after': 'always-single-line',
 		'declaration-colon-space-before': 'never',
 		'declaration-block-trailing-semicolon': null,
 		'declaration-block-no-redundant-longhand-properties': null,
-		'max-empty-lines': 1,
-		'no-empty-source': null,
-		'no-invalid-double-slash-comments': false,
-		'selector-class-pattern': null,
-		'function-no-unknown': null,
-		'custom-property-no-missing-var-function': null,
-		'font-family-no-missing-generic-family-keyword': null,
-		// "unit-whitelist": ["em", "rem", "%", 's', 'px', 'pt', 'rpx', 'vw', 'vh', 'deg', 'upx'],
 		'rule-empty-line-before': [
 			'always',
 			{
