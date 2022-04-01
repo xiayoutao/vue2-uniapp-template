@@ -1,5 +1,5 @@
-import { isURL } from '@/utils';
-import log from '@/utils/log';
+import { isURL } from '@/tools/utils';
+import log from '@/tools/log';
 
 const baseURL = process.env.VUE_APP_BASE_URL;
 

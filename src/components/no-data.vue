@@ -1,11 +1,9 @@
 <template>
 	<div class="no-data" :style="{ background }">
 		<span class="icon" :class="icon"></span>
-		<span
-			class="label"
-			:style="{ fontSize: messageSize, color: messageColor }"
-			>{{ message }}</span
-		>
+		<span class="label" :style="{ fontSize: messageSize, color: messageColor }">
+			{{ message }}
+		</span>
 	</div>
 </template>
 
@@ -35,7 +33,7 @@ export default {
 	.icon {
 		width: 240px;
 		height: 228px;
-		background: url("#{$baseBg}/no-data.png?v=#{$version}") no-repeat center;
+		background: url('#{$baseBg}/no-data.png?v=#{$version}') no-repeat center;
 		background-size: 100% 100%;
 	}
 

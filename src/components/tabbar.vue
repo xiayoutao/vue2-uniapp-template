@@ -83,7 +83,7 @@ export default {
 	padding-bottom: calc(constant(safe-area-inset-bottom));
 	padding-bottom: calc(env(safe-area-inset-bottom));
 	background-color: #fff;
-	box-shadow: 0 -2px 0 0 rgb(229 229 229 / 20%);
+	box-shadow: 0 -2px 0 0 rgba(229, 229, 229, 20%);
 
 	.tabbar-inner {
 		box-sizing: border-box;

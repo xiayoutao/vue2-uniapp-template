@@ -1,6 +1,6 @@
 <script>
 import { mapGetters } from 'vuex';
-import AppPromise from '@/utils/app-promise';
+import AppPromise from '@/tools/app-promise';
 
 export default {
 	data() {

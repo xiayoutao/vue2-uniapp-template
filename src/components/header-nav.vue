@@ -31,7 +31,7 @@
 
 <script>
 import { mapMutations } from 'vuex';
-import { getStringByLen } from '@/utils';
+import { getStringByLen } from '@/tools/utils';
 
 export default {
 	props: {
@@ -124,7 +124,7 @@ export default {
 	}
 
 	&.has-border {
-		box-shadow: 0 2px 0 0 rgb(229 229 229 / 50%);
+		box-shadow: 0 2px 0 0 rgba(229, 229, 229, 50%);
 	}
 
 	.header-nav {

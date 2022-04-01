@@ -1,7 +1,11 @@
-$version: "1.0.0";
-$baseBg: "http://runningbk-dev.oss-cn-guangzhou.aliyuncs.com/";
+$version: '1.0.0';
+$baseBg: 'http://runningbk-dev.oss-cn-guangzhou.aliyuncs.com/';
 
-@mixin flex-row($align-items: stretch, $justify-content: flex-start, $align-content: "") {
+@mixin flex-row(
+	$align-items: stretch,
+	$justify-content: flex-start,
+	$align-content: ''
+) {
 	display: flex;
 	flex-direction: row;
 	align-content: $align-content;
@@ -10,7 +14,11 @@ $baseBg: "http://runningbk-dev.oss-cn-guangzhou.aliyuncs.com/";
 }
 
 // 竖行排版，一行显示一个
-@mixin flex-column($align-items: stretch, $justify-content: flex-start, $align-content: '') {
+@mixin flex-column(
+	$align-items: stretch,
+	$justify-content: flex-start,
+	$align-content: ''
+) {
 	display: flex;
 	flex-direction: column;
 	align-content: $align-content;
@@ -19,7 +27,11 @@ $baseBg: "http://runningbk-dev.oss-cn-guangzhou.aliyuncs.com/";
 }
 
 // 自动换行
-@mixin  flex-wrap ($align-items: stretch, $justify-content: flex-start, $flex-direction: row) {
+@mixin flex-wrap(
+	$align-items: stretch,
+	$justify-content: flex-start,
+	$flex-direction: row
+) {
 	display: flex;
 	flex-direction: $flex-direction;
 	flex-wrap: wrap;
@@ -28,12 +40,10 @@ $baseBg: "http://runningbk-dev.oss-cn-guangzhou.aliyuncs.com/";
 	justify-content: $justify-content;
 }
 
-@mixin ellipsis ($type: "nowrap", $lineClamp: 2) {
-	@if $type == "nowrap" {
+@mixin ellipsis($type: 'nowrap', $lineClamp: 2) {
+	@if $type == 'nowrap' {
 		white-space: nowrap;
-	}
-
-	@else if $type == "line-clamp" {
+	} @else if $type == 'line-clamp' {
 		display: box;
 		-webkit-box-orient: vertical;
 		-webkit-line-clamp: $lineClamp;

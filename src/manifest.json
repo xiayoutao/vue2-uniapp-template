@@ -54,13 +54,7 @@
 			"es6": true,
 			"postcss": true,
 			"minified": true,
-			"packNpmManually": false,
-			"packNpmRelationList": [
-				{
-					"packageJsonPath": "./package.json",
-					"miniprogramNpmDistDir": "./"
-				}
-			]
+			"packNpmManually": false
 		}
 	},
 	"mp-alipay": {

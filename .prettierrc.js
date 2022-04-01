@@ -15,8 +15,8 @@ module.exports = {
 	stylelintIntegration: true, // 不让prettier使用stylelint的代码格式进行校验
 	eslintIntegration: true, // 不让prettier使用eslint的代码格式进行校验
 	// tslintIntegration: true, // 不让prettier使用tslint的代码格式进行校验
-	// // disableLanguages: ['vue'], // 不格式化vue文件，vue文件的格式化单独设置
-	// htmlWhitespaceSensitivity: 'ignore',
+	// disableLanguages: ['vue'], // 不格式化vue文件，vue文件的格式化单独设置
+	htmlWhitespaceSensitivity: 'ignore',
 	ignorePath: '.prettierignore' // 不使用prettier格式化的文件填写在项目的.prettierignore文件中
 	// requireConfig: false, // Require a 'prettierconfig' to format prettier
 };

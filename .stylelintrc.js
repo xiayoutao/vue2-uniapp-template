@@ -9,6 +9,7 @@ module.exports = {
 		'stylelint-prettier',
 		'stylelint-scss'
 	],
+	customSyntax: "postcss-scss",
 	overrides: [
 		// 扫描.vue/html文件中的<style>标签内的样式
 		{
@@ -31,11 +32,17 @@ module.exports = {
 		"unit-no-unknown": null,
 		'no-empty-source': null,
 		'max-empty-lines': 1,
+		'number-max-precision': 4, // css属性值中小数点之后数字的最大位数
 		'string-quotes': 'single',
+		"color-function-notation": "legacy", // 很重要
 		'no-invalid-double-slash-comments': null,
 		'selector-class-pattern': null,
-		'function-no-unknown': null,
 		'font-family-no-missing-generic-family-keyword': null,
+		'max-empty-lines': true,
+		'no-empty-source': false,
+		'no-invalid-double-slash-comments': false,
+		'selector-class-pattern': true,
+		'function-no-unknown': false,
 		'custom-property-no-missing-var-function': null,
 		'declaration-colon-space-after': 'always-single-line',
 		'declaration-colon-space-before': 'never',
@@ -53,7 +60,7 @@ module.exports = {
 				ignoreAtRules: ['mixin', 'include', 'extend', 'if', 'else']
 			}
 		],
-		"scss/at-rule-no-unknown": true,
+		"scss/at-rule-no-unknown": false,
 		'plugin/rational-order': [
 			true,
 			{
