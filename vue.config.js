@@ -1,5 +1,6 @@
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const InstallPlugin = require('./webpack/install-webpack-plugin');
+const { installWxNpmPackageConfig } = require('./build/config');
 const path = require('path');
 const resolve = dir => path.join(__dirname, dir);
 
@@ -19,12 +20,7 @@ module.exports = {
 				fix: true,
 				failOnError: false,
 			}),
-			new InstallPlugin({
-				generate: {
-					autoBuildNpm: 'npm',
-				},
-				package: {},
-			}),
+			new InstallPlugin(installWxNpmPackageConfig),
 		]
 	},
   chainWebpack: (config) => {

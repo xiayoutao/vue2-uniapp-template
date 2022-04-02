@@ -1,13 +1,11 @@
 const path = require('path');
 const execa = require('execa');
-// const colors = require('colors/safe');
-const _ = require('./utils');
 const chalk = require('chalk');
+const fs = require('fs');
 
-const PluginName = 'InstallPlugin';
+const weixinPath = 'mp-weixin';
 
 const isMiniprogram = process.env.UNI_PLATFORM === 'mp-weixin'; // 是否为微信小程序
-const weixinPath = 'mp-weixin';
 
 const format = (label, msg) => {
 	return (
@@ -21,6 +19,30 @@ const format = (label, msg) => {
 			.join('\n') + '\n'
 	);
 };
+
+/**
+ * 判断文件是否存在
+ */
+ function isFileExisted(filePath) {
+	try {
+		fs.accessSync(filePath);
+		return true;
+	} catch (err) {
+		return false;
+	}
+}
+
+/**
+ * 添加文件
+ */
+function addFile(compilation, filename, content) {
+	compilation.assets[filename] = {
+		source: () => content,
+		size: () => Buffer.from(content).length,
+	};
+}
+
+const PluginName = 'InstallPlugin';
 
 class InstallPlugin {
 	constructor(options) {
@@ -50,7 +72,7 @@ class InstallPlugin {
 				null,
 				'\t',
 			);
-			_.addFile(compilation, './package.json', packageConfigJsonContent);
+			addFile(compilation, './package.json', packageConfigJsonContent);
 			callback();
 		});
 
@@ -70,7 +92,7 @@ class InstallPlugin {
 			const autoBuildNpm = generateConfig.autoBuildNpm || false; // 处理自动安装依赖
 			let notInstallPackage = [...dependencies];
 			for (let i = 0, len = dependencies.length; i < len; i++) {
-				const isExisted = _.isFileExisted(
+				const isExisted = isFileExisted(
 					path.resolve(
 						distDir,
 						`./${weixinPath}/node_modules/${dependencies[i]}/package.json`,
