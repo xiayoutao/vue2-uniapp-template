@@ -111,6 +111,8 @@ export default {
 
 <style lang="scss" scoped>
 .header {
+	@include flex-column('', flex-end);
+
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -128,6 +130,8 @@ export default {
 	}
 
 	.header-nav {
+		@include flex-row(center);
+
 		position: relative;
 		box-sizing: border-box;
 		width: 100%;
@@ -164,26 +168,22 @@ export default {
 		}
 
 		.title {
+			@include flex-row(center, center);
+
 			flex: 1;
 			height: 100%;
 			padding: 0 32px;
 			font-weight: 500;
 			font-size: 30px;
 			font-family: PingFangSC-Medium;
-
-			@include flex-row(center, center);
 		}
 
 		.slot {
+			@include flex-row(center, center);
+
 			flex: 1;
 			height: 100%;
-
-			@include flex-row(center, center);
 		}
-
-		@include flex-row(center);
 	}
-
-	@include flex-column('', flex-end);
 }
 </style>

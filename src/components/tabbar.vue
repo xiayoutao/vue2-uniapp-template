@@ -86,11 +86,15 @@ export default {
 	box-shadow: 0 -2px 0 0 rgba(229, 229, 229, 20%);
 
 	.tabbar-inner {
+		@include flex-row();
+
 		box-sizing: border-box;
 		width: 100%;
 		height: 100%;
 
 		.tabbar-cell {
+			@include flex-column(center, center);
+
 			position: relative;
 			flex: 1;
 			height: 100%;
@@ -111,11 +115,7 @@ export default {
 				font-family: PingFangSC-Medium;
 				line-height: 1.4;
 			}
-
-			@include flex-column(center, center);
 		}
-
-		@include flex-row();
 	}
 }
 </style>

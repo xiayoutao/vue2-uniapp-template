@@ -50,6 +50,8 @@ export default {
 }
 
 .app-layout {
+	@include flex-column();
+
 	box-sizing: border-box;
 	min-height: 100vh;
 	background-color: --bg-color;
@@ -80,7 +82,5 @@ export default {
 		height: calc(20px + constant(safe-area-inset-bottom));
 		height: calc(20px + env(safe-area-inset-bottom));
 	}
-
-	@include flex-column();
 }
 </style>

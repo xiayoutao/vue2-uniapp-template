@@ -1,7 +1,6 @@
 module.exports = {
 	root: true,
 	env: {
-		browser: true,
 		node: true,
 		es6: true,
 	},
@@ -12,11 +11,15 @@ module.exports = {
 		getCurrentPages: 'readonly',
   },
 	plugins: ['vue', 'prettier'],
-	extends: ['plugin:vue/essential', 'eslint:recommended'],
+	extends: [
+		'plugin:vue/essential',
+		'eslint:recommended'
+	],
+	parser: 'vue-eslint-parser',
 	parserOptions: {
-    parser: 'babel-eslint',
 		ecmaVersion: 6,
-		sourceType: 'module',
+		sourceType: "module",
+		parser: "@babel/eslint-parser",
 	},
 	rules: {
 		'prettier/prettier': 1,

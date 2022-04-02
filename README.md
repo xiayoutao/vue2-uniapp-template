@@ -3,12 +3,14 @@
 ### 微信小程序运行
 
 ```
+npm run dev
 npm run dev:mp-weixin
 ```
 
 ### 构建微信小程序
 
 ```
+npm run build
 npm run build:mp-weixin
 ```
 

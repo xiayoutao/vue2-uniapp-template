@@ -7,8 +7,10 @@ module.exports = {
 	],
 	plugins: [
 		'stylelint-prettier',
-		'stylelint-scss'
+		'stylelint-scss',
+		'stylelint-order',
 	],
+	ignoreFiles: ['**/*.js', '**/*.md'],
 	customSyntax: "postcss-scss",
 	overrides: [
 		// 扫描.vue/html文件中的<style>标签内的样式
@@ -57,10 +59,17 @@ module.exports = {
 		'at-rule-no-unknown': [
 			true,
 			{
-				ignoreAtRules: ['mixin', 'include', 'extend', 'if', 'else']
+				ignoreAtRules: ['function', 'mixin', 'include', 'extend', 'each', 'if', 'else']
 			}
 		],
 		"scss/at-rule-no-unknown": false,
+		'order/order': [
+      'at-rules', // 规则
+      'declarations', // 声明
+      'custom-properties', // 自定义属性
+      'dollar-variables', // 变量
+      'rules', // 规则
+    ],
 		'plugin/rational-order': [
 			true,
 			{

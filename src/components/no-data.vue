@@ -24,6 +24,8 @@ export default {
 
 <style lang="scss" scoped>
 .no-data {
+	@include flex-column(center, center);
+
 	position: relative;
 	box-sizing: border-box;
 	height: 500px;
@@ -42,7 +44,5 @@ export default {
 		color: #999;
 		font-size: 24px;
 	}
-
-	@include flex-column(center, center);
 }
 </style>

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development UNI_PLATFORM=mp-weixin vue-cli-service uni-build --watch",
-    "build": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin vue-cli-service uni-build",
+    "dev": "npm run dev:mp-weixin",
+    "build": "npm run build:mp-weixin",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
     "build:custom": "cross-env NODE_ENV=production uniapp-cli custom",
     "build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 vue-cli-service uni-build",
@@ -71,6 +71,7 @@
     "vuex": "^3.2.0"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.17.0",
     "@babel/runtime": "~7.12.0",
     "@dcloudio/types": "*",
     "@dcloudio/uni-automator": "^2.0.1-33920220314002",
@@ -85,7 +86,6 @@
     "@dcloudio/webpack-uni-pages-loader": "^2.0.1-33920220314002",
     "@vue/cli-plugin-babel": "~4.5.14",
     "@vue/cli-service": "~4.5.14",
-    "babel-eslint": "^10.1.0",
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
     "eslint": "^8.11.0",
@@ -105,10 +105,15 @@
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^25.0.0",
+    "stylelint-order": "^5.0.0",
     "stylelint-prettier": "^2.0.0",
     "stylelint-scss": "^4.2.0",
     "stylelint-webpack-plugin": "^3.2.0",
+    "vue-eslint-parser": "^8.3.0",
     "vue-template-compiler": "^2.6.11"
+  },
+  "engines": {
+    "node": ">=12.0.0 <=14.18.0"
   },
   "browserslist": [
     "Android >= 4.4",
