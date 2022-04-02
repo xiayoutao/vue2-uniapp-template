@@ -1,0 +1,25 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true,
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.enable": true,
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".vue"
+    ]
+  },
+  "eslint.validate": [
+    "javascript",
+    "vue",
+  ],
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "git.ignoreLimitWarning": true,
+}
